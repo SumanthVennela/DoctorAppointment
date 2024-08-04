@@ -1,21 +1,37 @@
-*{
+/* Reset padding, margin, and box-sizing for all elements */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
-.home{
-    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url(images/doctor.jpg)no-repeat;
-    background-size: 100% 100%;
+
+/* Home section with background image */
+.home {
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url(images/doctor.jpg) no-repeat;
+    background-size: cover; /* Ensure the background covers the entire area */
     width: 100%;
     padding: 180px 0;
+}
 
+/* Responsive styles for section.doctor */
+section.doctor img {
+    width: 100%; /* Set the width to 100% of its container */
+    max-width: 130px; /* Ensure the image doesn’t exceed a specific maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
 }
-section.doctor img{
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
+
+/* Media query for small devices */
+@media (max-width: 768px) {
+    .home {
+        padding: 120px 0; /* Adjust padding for smaller screens */
+    }
+    
+    section.doctor img {
+        max-width: 100px; /* Adjust maximum width for smaller screens */
+    }
 }
+
 hr {
     width: 10%;
     border-width: 4px;
